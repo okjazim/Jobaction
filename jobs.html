@@ -2,7 +2,57 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Jobs</title>
+  <title>Browse Jobs - JobAction</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  </head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <h1 class="logo">JobAction</h1>
+      <div class="nav-links">
+        <a href="home.html" class="nav-link">Home</a>
+        <a href="jobs.html" class="nav-link active">Browse Jobs</a>
+        <a href="dashboard.html" class="nav-link">Dashboard</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Jobs Page Container -->
+  <div class="jobs-page">
+    <!-- Search & Filters -->
+    <section class="jobs-search">
+      <h2>Discover Opportunities</h2>
+      <form id="jobSearchForm" class="search-form">
+        <div class="form-group inline">
+          <label for="searchKeyword">Keyword</label>
+          <input type="text" id="searchKeyword" placeholder="e.g., engineer, designer" />
+        </div>
+        <div class="form-group inline">
+          <label for="searchLocation">Location</label>
+          <input type="text" id="searchLocation" placeholder="e.g., New York, Remote" />
+        </div>
+        <button type="submit" class="btn btn-primary">Search</button>
+      </form>
+    </section>
+
+    <!-- Jobs Listing -->
+    <section class="jobs-list-section">
+      <div class="section-header">
+        <h3>Job Listings</h3>
+        <span id="jobsCount" class="muted-text">0 jobs</span>
+      </div>
+      <div id="jobsList" class="jobs-grid">
+        <p class="empty-state">Loading jobs...</p>
+      </div>
+    </section>
+  </div>
+
+  <script src="main.js"></script>
+</body>
 </html>

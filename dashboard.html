@@ -2,7 +2,105 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Dashbaord</title>
+  <title>Dashboard - JobAction</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  </head>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <h1 class="logo">JobAction</h1>
+      <div class="nav-links">
+        <a href="home.html" class="nav-link">Home</a>
+        <a href="jobs.html" class="nav-link">Browse Jobs</a>
+        <a href="dashboard.html" class="nav-link active">Dashboard</a>
+        <button id="logoutBtn" class="btn btn-ghost">
+          <i class="fa fa-sign-out"></i> Logout
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Dashboard Container -->
+  <div class="dashboard-container">
+    <!-- User Info Section -->
+    <section class="dashboard-section">
+      <h2>Welcome, <span id="userEmail">User</span>!</h2>
+      <p class="user-info">Manage your jobs, applications, and saved listings</p>
+    </section>
+
+    <!-- Post Job Section (for employers) -->
+    <section class="dashboard-section">
+      <div class="section-header">
+        <h3>Post a New Job</h3>
+        <button id="toggleJobForm" class="btn btn-primary">+ New Job</button>
+      </div>
+      
+      <!-- Job Posting Form (hidden by default) -->
+      <form id="postJobForm" class="job-form" style="display: none;">
+        <div class="form-group">
+          <label for="jobTitle">Job Title *</label>
+          <input type="text" id="jobTitle" name="title" required placeholder="e.g., Senior Software Engineer" />
+        </div>
+        
+        <div class="form-group">
+          <label for="jobCompany">Company *</label>
+          <input type="text" id="jobCompany" name="company" required placeholder="e.g., Tech Corp" />
+        </div>
+        
+        <div class="form-group">
+          <label for="jobLocation">Location *</label>
+          <input type="text" id="jobLocation" name="location" required placeholder="e.g., New York, NY" />
+        </div>
+        
+        <div class="form-group">
+          <label for="jobDescription">Description *</label>
+          <textarea id="jobDescription" name="description" rows="5" required placeholder="Job description, requirements, benefits..."></textarea>
+        </div>
+        
+        <div class="form-group">
+          <label for="jobSalary">Salary (Optional)</label>
+          <input type="text" id="jobSalary" name="salary" placeholder="e.g., $80,000 - $120,000" />
+        </div>
+        
+        <div class="form-actions">
+          <button type="submit" class="btn btn-primary">Post Job</button>
+          <button type="button" id="cancelJobForm" class="btn btn-secondary">Cancel</button>
+        </div>
+        <div id="jobFormError" class="error-message"></div>
+      </form>
+    </section>
+
+    <!-- My Posted Jobs Section -->
+    <section class="dashboard-section">
+      <h3>My Posted Jobs</h3>
+      <div id="postedJobsContainer" class="jobs-grid">
+        <p class="empty-state">No jobs posted yet. Post your first job above!</p>
+      </div>
+    </section>
+
+    <!-- Saved Jobs Section (for job seekers) -->
+    <section class="dashboard-section">
+      <h3>Saved Jobs</h3>
+      <div id="savedJobsContainer" class="jobs-grid">
+        <p class="empty-state">No saved jobs yet. Browse jobs and save your favorites!</p>
+      </div>
+    </section>
+
+    <!-- Applications Section -->
+    <section class="dashboard-section">
+      <h3>My Applications</h3>
+      <div id="applicationsContainer" class="applications-list">
+        <p class="empty-state">No applications yet. Start applying to jobs!</p>
+      </div>
+    </section>
+  </div>
+
+  <script src="main.js"></script>
+</body>
 </html>
