@@ -62,3 +62,7 @@ If you get "Invalid login credentials":
 3. **Verify User Creation**: Check Supabase Dashboard → Authentication → Users to see if your account was created
 4. **Try Different Email**: Some email providers may be blocked by Supabase
 5. **Check Password**: Make sure you're using the exact same password for both signup and login
+
+## License
+This project is licensed under the **MIT License**.
+See [`LICENSE`](LICENSE) for details. © 2026 okjazim
