@@ -10,14 +10,14 @@ The frontend is built using **HTML**, **CSS**, and **JavaScript**, with a simple
 - `index.html` - Alternative entry point (same as home.html)
 
 ## 🚀 Features
-- ✅ User authentication (signup/login)
-- ✅ Job posting and management
-- ✅ Job search and filtering
-- ✅ Job applications
-- ✅ Job saving/bookmarking
-- ✅ Dashboard with user-specific data
-- ✅ Responsive design
-- ✅ Professional UI with Font Awesome icons
+- User authentication (signup/login)
+- Job posting and management
+- Job search and filtering
+- Job applications
+- Job saving/bookmarking
+- Dashboard with user-specific data
+- Responsive design
+- Professional UI with Font Awesome icons
 
 ## 📋 Setup Instructions
 
